@@ -13,7 +13,9 @@
       <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
         <div class="player mb-5">
           <span class="team-number">{{$jugadores->id}}</span>
-          <img src="{{$jugadores->imagen}}" alt="jugador-{{$jugadores->id}}" class="img-fluid image rounded-circle">
+          <a href="{{route('jugadores',$jugadores->id)}}">
+            <img src="{{$jugadores->imagen}}" alt="jugador-{{$jugadores->id}}" class="img-fluid image rounded-circle">
+          </a>
           <h4>{{$jugadores->nombre}} {{$jugadores->apellido}}</h4>
         </div>
       </div>

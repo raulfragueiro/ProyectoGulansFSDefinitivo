@@ -36,7 +36,7 @@
                 body,
                 header,
                 .carousel {
-                    height: 100vh;
+                    height: 30vh;
                 }
             }
             @media (min-width: 800px) and (max-width: 850px) {
@@ -45,7 +45,7 @@
                 body,
                 header,
                 .carousel {
-                    height: 100vh;
+                    height: 30vh;
                 }
             }
             @media (min-width: 800px) and (max-width: 850px) {

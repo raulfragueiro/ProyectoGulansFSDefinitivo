@@ -7,6 +7,25 @@
   .carousel {
   height: 60vh;
   }
+
+  @media (max-width: 740px) {
+
+html,
+body,
+header,
+.carousel {
+    height: 30vh;
+}
+}
+@media (min-width: 800px) and (max-width: 850px) {
+
+html,
+body,
+header,
+.carousel {
+    height: 30vh;
+}
+}
 </style>
 @endsection
 @section('content')
@@ -57,9 +76,9 @@
 <!--Section: Resultados-->
 <hr class="my-5">
 <!--Section: Stats & Clasificacion-->
-<section>
+<section class="mt-5 wow fadeIn">
   <!--Grid fila-->
-  <div class="row wow fadeIn w-100 p-3">
+  <div class="row wow fadeIn">
     <!--Grid columna-->
     <div class="col-lg-6 col-md-12 px-4 mt-5">
       <div class="mt-5">
@@ -75,8 +94,6 @@
               </th>
               <th class="th-sm">Goles
               </th>
-              <th class="th-sm">Partidos
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -86,7 +103,6 @@
               <td class="align-middle">{{$jugadores->nombre}}</td>
               <td class="align-middle">{{$jugadores->apellidos}}</td>
               <td class="align-middle">{{$jugadores->goles}}</td>
-              <td class="align-middle">{{$jugadores->partidos}}</td>
             </tr>
             @endforeach
           </tbody>

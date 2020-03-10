@@ -28,7 +28,7 @@ Route::get('/contacto', function () {
 
 Route::get('/plantilla','PlayersController@plantilla' )->name('plantilla');
 
-Route::get('/stats','PlayersController@stats' )->name('stats');
+Route::get('/jugadores/{id}','PlayersController@edit' )->name('jugadores');
 
 Route::get('/liga','PlayersController@liga' )->name('liga');
 

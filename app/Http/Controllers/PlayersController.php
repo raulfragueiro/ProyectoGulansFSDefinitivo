@@ -18,11 +18,6 @@ class PlayersController extends Controller
         return view('welcome',compact('jugadores', 'partidos', 'resultados', 'clasificacion'));
     }
 
-    public function stats(){
-        $jugadores = Players::orderBy('id', 'asc')->get();
-        return view('stats',compact('jugadores'));
-    }
-
     public function plantilla(){
         $jugadores = Players::orderBy('id', 'asc')->get();
         return view('plantilla',compact('jugadores'));
@@ -31,6 +26,11 @@ class PlayersController extends Controller
     public function liga(){
         $clasificacion = Clasificacion::orderBy('puntos', 'desc')->get();
         return view('liga',compact('clasificacion'));
+    }
+
+    public function edit($id){
+        $jugadores = Players::find($id);
+        return view ('jugadores',compact('jugadores'));
     }
 
 }
